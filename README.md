@@ -1,9 +1,14 @@
 express-webpack-asset
 ===============
 
+Middleware to load hashed webpack assets, in combiation with https://github.com/sporto/assets-webpack-plugin
+
+
+## Configuration
+
 Webpack config:
 ```
-    var SaveHashes = require('[assets-webpack-plugin](https://github.com/sporto/assets-webpack-plugin)');
+    var SaveHashes = require('assets-webpack-plugin]');
 
     plugins: [
         new SaveHashes({path: path.join(__dirname, 'config')})
@@ -24,7 +29,9 @@ Express config:
     app.use(webpackAssets('./config/webpack-assets.json'));
 ```
 
-View helper:
+## Usage
+
+Express view helper:
 
 ```
 <script src="<%= webpack_asset('main') %>"></script>
