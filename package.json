@@ -1,0 +1,12 @@
+{
+  "name": "express-webpack-assets",
+  "description": "Middleware for Express.js to load webpack assets",
+  "version": "0.0.1",
+  "author": "Kenneth Auchenberg <kenneth@auchenberg.dk>",
+  "license": "MIT",
+  "main": "express-webpack-assets.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/auchenberg/express-webpack-asset.git"
+  }  
+}
