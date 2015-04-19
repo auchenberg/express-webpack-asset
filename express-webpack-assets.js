@@ -19,7 +19,7 @@ module.exports = function(manifestPath) {
 
     function getAsset(path) {
 
-        if(!isManifestLoaded) {
+        if(process.env.NODE_ENV === 'dev' || !isManifestLoaded) {
             manifest = loadManifest();
         }
 
