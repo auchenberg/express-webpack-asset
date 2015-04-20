@@ -1,8 +1,9 @@
 express-webpack-asset
 ===============
 
-Middleware to load hashed webpack assets, in combiation with https://github.com/sporto/assets-webpack-plugin
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
+Middleware to load hashed webpack assets, in combiation with https://github.com/sporto/assets-webpack-plugin
 
 ## Configuration
 
