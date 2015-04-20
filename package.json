@@ -1,7 +1,7 @@
 {
   "name": "express-webpack-assets",
   "description": "Middleware for Express.js to load webpack assets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Kenneth Auchenberg <kenneth@auchenberg.dk>",
   "license": "MIT",
   "main": "express-webpack-assets.js",
