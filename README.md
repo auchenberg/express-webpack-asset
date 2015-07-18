@@ -3,14 +3,14 @@ express-webpack-asset
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-Middleware to load hashed webpack assets, in combiation with https://github.com/sporto/assets-webpack-plugin
+Middleware to load hashed webpack assets, in combination with https://github.com/sporto/assets-webpack-plugin
 
 ## Configuration
 
 Webpack config:
 
 ```javascript
-var SaveHashes = require('assets-webpack-plugin]');
+var SaveHashes = require('assets-webpack-plugin');
 
 plugins: [
   new SaveHashes({path: path.join(__dirname, 'config')})
