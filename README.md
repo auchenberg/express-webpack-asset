@@ -33,6 +33,15 @@ app.use(webpackAssets('./config/webpack-assets.json', {
 }));
 ```
 
+Express-webpack-asset can also support you with multiple json files. For that case you need to pass a path of your assets json files, example of usage:
+```javascript
+var webpackAssets = require('express-webpack-assets');
+app.use(webpackAssets('./config', {
+	devMode: true/false
+}));
+```
+Please bear in mind that result of extend will override the object properties with equal names w.r.t. order returned by Nodejs.fs.readDir.
+
 ## Options
 
 ```javascript
