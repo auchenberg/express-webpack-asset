@@ -42,13 +42,21 @@ module.exports = function (manifestPath, options) {
     }
   }
 
-  function getAsset (path) {
+  function getAsset (path, assetType) {
     if (options.devMode || !isManifestLoaded) {
       manifest = loadManifest()
     }
 
     if (manifest) {
-      return manifest[path]
+      if (typeof manifest[path] === 'object') {
+        if (assetType) {
+          return manifest[path][assetType]
+        } else {
+          throw new Exception('Asset type not specified, could not resolve asset ' + path)
+        }
+      } else {
+        return manifest[path]
+      }
     } else {
       return path
     }
