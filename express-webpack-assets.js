@@ -48,12 +48,8 @@ module.exports = function (manifestPath, options) {
     }
 
     if (manifest) {
-      if (typeof manifest[path] === 'object') {
-        if (assetType) {
-          return manifest[path][assetType]
-        } else {
-          throw new Exception('Asset type not specified, could not resolve asset ' + path)
-        }
+      if (typeof manifest[path] === 'object' && assetType) {
+        return manifest[path][assetType]
       } else {
         return manifest[path]
       }
