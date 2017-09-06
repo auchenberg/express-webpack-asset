@@ -66,7 +66,8 @@ Example webpack-assets.json (taken from the README in the assets-webpack-plugin 
 }
 ```
 
-Two ways of linking in assets. Examples shown linking 'one' asset using express EJS view snippets. 
+Two ways of linking in assets. Examples shown linking 'one' asset using express EJS view snippets.
+
 1.
 
 ```html
