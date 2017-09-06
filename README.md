@@ -66,11 +66,18 @@ Example webpack-assets.json (taken from the README in the assets-webpack-plugin 
 }
 ```
 
-Express EJS view snippet:
+Two ways of linking in assets. Examples shown linking 'one' asset using express EJS view snippets. 
+1.
 
 ```html
 <script src="<%= webpack_asset('one', 'js') %>"></script>
 
 ```
 
+2.
 
+
+```html
+<script src="<%= webpack_asset('one').js %>"></script>
+
+```
