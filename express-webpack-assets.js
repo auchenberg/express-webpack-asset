@@ -42,13 +42,17 @@ module.exports = function (manifestPath, options) {
     }
   }
 
-  function getAsset (path) {
+  function getAsset (path, assetType) {
     if (options.devMode || !isManifestLoaded) {
       manifest = loadManifest()
     }
 
     if (manifest) {
-      return manifest[path]
+      if (typeof manifest[path] === 'object' && assetType) {
+        return manifest[path][assetType]
+      } else {
+        return manifest[path]
+      }
     } else {
       return path
     }

@@ -3,11 +3,11 @@ express-webpack-asset
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-Middleware to load hashed webpack assets, in combination with https://github.com/sporto/assets-webpack-plugin
+Middleware to load hashed webpack assets, in combination with https://github.com/kossnocorp/assets-webpack-plugin
 
 ## Configuration
 
-Webpack config:
+Example webpack config:
 
 ```javascript
 var SaveHashes = require('assets-webpack-plugin');
@@ -53,11 +53,32 @@ Please bear in mind that result of extend will override the object properties wi
 
 ## Usage
 
-Express view helper:
+Example webpack-assets.json (taken from the README in the assets-webpack-plugin project):
+
+```json
+{
+    "one": {
+        "js": "/js/one_2bb80372ebe8047a68d4.bundle.js"
+    },
+    "two": {
+        "js": "/js/two_2bb80372ebe8047a68d4.bundle.js"
+    }
+}
+```
+
+Two ways of linking in assets. Examples shown linking 'one' asset using express EJS view snippets.
+
+1.
+
+```html
+<script src="<%= webpack_asset('one', 'js') %>"></script>
 
 ```
-<script src="<%= webpack_asset('main') %>"></script>
+
+2.
+
+
+```html
+<script src="<%= webpack_asset('one').js %>"></script>
 
 ```
-
-
